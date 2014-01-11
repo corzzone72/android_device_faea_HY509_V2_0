@@ -18,14 +18,14 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.carrier=wifi-only
 
 PRODUCT_COPY_FILES := \
-    device/oppo/r819/root/fstab.mt6589:root/fstab.mt6589 \
-    device/oppo/r819/root/init.mt6589.rc:root/init.mt6589.rc
+    device/faea/HY509_V2_0/root/fstab.mt6589:root/fstab.mt6589 \
+    device/faea/HY509_V2_0/root/init.mt6589.rc:root/init.mt6589.rc
 
 # the actual meat of the device-specific product definition
-$(call inherit-product, device/oppo/r819/device-common.mk)
+$(call inherit-product, device/faea/HY509_V2_0/device-common.mk)
 
 # inherit from the non-open-source side, if present
-$(call inherit-product, vendor/oppo/r819/r819-vendor.mk)
+$(call inherit-product, vendor/faea/HY509_V2_0/HY509_V2_0-vendor.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=wifi-only
@@ -33,4 +33,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_RESOLUTION := 720x1280
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/oppo/r819/overlay
+    device/faea/HY509_V2_0/overlay

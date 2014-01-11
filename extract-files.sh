@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE=../../../vendor/oppo/r819/proprietary
+BASE=../../../vendor/oppo/HY509_V2_0/proprietary
 rm -rf $BASE/*
 
 for FILE in `cat proprietary-files.txt`; do

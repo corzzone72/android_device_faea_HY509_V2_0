@@ -14,6 +14,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter r819,$(TARGET_DEVICE)),)
+ifneq ($(filter HY509_V2_0,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif

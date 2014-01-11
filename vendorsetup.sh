@@ -20,5 +20,5 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo full_r819-userdebug
-add_lunch_combo omni_r819-userdebug
+add_lunch_combo full_HY509_V2_0-userdebug
+add_lunch_combo omni_HY509_V2_0-userdebug

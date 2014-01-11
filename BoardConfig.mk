@@ -35,19 +35,19 @@ USE_CAMERA_STUB := true
 
 #TARGET_RECOVERY_UI_LIB := librecovery_ui_mt6589
 
-#TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/r819
+#TARGET_RELEASETOOLS_EXTENSIONS := device/faea/HY509_V2_0
 
-include vendor/oppo/r819/BoardConfigVendor.mk
-include device/oppo/r819/BoardConfigCommon.mk
+include vendor/faea/HY509_V2_0/BoardConfigVendor.mk
+include device/faea/HY509_V2_0/BoardConfigCommon.mk
 
-TARGET_RECOVERY_FSTAB = device/oppo/r819/root/fstab.mt6589
+TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/fstab.mt6589
 
 BOARD_CUSTOM_MKBOOTIMG := mkmtkbootimg
 
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 #BOARD_SEPOLICY_DIRS := \
-#        device/oppo/r819/sepolicy
+#        device/faea/HY509_V2_0/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
 #        file_contexts \

@@ -15,7 +15,7 @@
 #
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-  LOCAL_KERNEL := device/oppo/r819/kernel
+  LOCAL_KERNEL := device/faea/HY509_V2_0/kernel
 else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -40,32 +40,32 @@ include frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/oppo/r819/root/ueventd.mt6589.rc:root/ueventd.mt6589.rc \
-    device/oppo/r819/root/init.mt6589.usb.rc:root/init.mt6589.usb.rc \
-    device/oppo/r819/root/init.modem.rc:root/init.modem.rc \
-    device/oppo/r819/gps.conf:system/etc/gps.conf
+    device/faea/HY509_V2_0/root/ueventd.mt6589.rc:root/ueventd.mt6589.rc \
+    device/faea/HY509_V2_0/root/init.mt6589.usb.rc:root/init.mt6589.usb.rc \
+    device/faea/HY509_V2_0/root/init.modem.rc:root/init.modem.rc \
+    device/faea/HY509_V2_0/gps.conf:system/etc/gps.conf
 
 PRODUCT_COPY_FILES += \
-    device/oppo/r819/modules/ccci.ko:system/lib/modules/ccci.ko \
-    device/oppo/r819/modules/ccci_plat.ko:system/lib/modules/ccci_plat.ko \
-    device/oppo/r819/modules/devapc.ko:system/lib/modules/devapc.ko \
-    device/oppo/r819/modules/devinfo.ko:system/lib/modules/devinfo.ko \
-    device/oppo/r819/modules/hid-logitech-dj.ko:system/lib/modules/hid-logitech-dj.ko \
-    device/oppo/r819/modules/mtk_fm_drv.ko:system/lib/modules/mtk_fm_drv.ko \
-    device/oppo/r819/modules/mtk_hif_sdio.ko:system/lib/modules/mtk_hif_sdio.ko \
-    device/oppo/r819/modules/mtklfb.ko:system/lib/modules/mtklfb.ko \
-    device/oppo/r819/modules/mtk_stp_bt.ko:system/lib/modules/mtk_stp_bt.ko \
-    device/oppo/r819/modules/mtk_stp_gps.ko:system/lib/modules/mtk_stp_gps.ko \
-    device/oppo/r819/modules/mtk_stp_uart.ko:system/lib/modules/mtk_stp_uart.ko \
-    device/oppo/r819/modules/mtk_stp_wmt.ko:system/lib/modules/mtk_stp_wmt.ko \
-    device/oppo/r819/modules/mtk_wmt_wifi.ko:system/lib/modules/mtk_wmt_wifi.ko \
-    device/oppo/r819/modules/pvrsrvkm.ko:system/lib/modules/pvrsrvkm.ko \
-    device/oppo/r819/modules/scsi_tgt.ko:system/lib/modules/scsi_tgt.ko \
-    device/oppo/r819/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
-    device/oppo/r819/modules/sec.ko:system/lib/modules/sec.ko \
-    device/oppo/r819/modules/vcodec_kernel_driver.ko:system/lib/modules/vcodec_kernel_driver.ko \
-    device/oppo/r819/modules/wlan.ko:system/lib/modules/wlan.ko \
-    device/oppo/r819/modules/wlan_mt6628.ko:system/lib/modules/wlan_mt6628.ko
+    device/faea/HY509_V2_0/modules/ccci.ko:system/lib/modules/ccci.ko \
+    device/faea/HY509_V2_0/modules/ccci_plat.ko:system/lib/modules/ccci_plat.ko \
+    device/faea/HY509_V2_0/modules/devapc.ko:system/lib/modules/devapc.ko \
+    device/faea/HY509_V2_0/modules/devinfo.ko:system/lib/modules/devinfo.ko \
+    device/faea/HY509_V2_0/modules/hid-logitech-dj.ko:system/lib/modules/hid-logitech-dj.ko \
+    device/faea/HY509_V2_0/modules/mtk_fm_drv.ko:system/lib/modules/mtk_fm_drv.ko \
+    device/faea/HY509_V2_0/modules/mtk_hif_sdio.ko:system/lib/modules/mtk_hif_sdio.ko \
+    device/faea/HY509_V2_0/modules/mtklfb.ko:system/lib/modules/mtklfb.ko \
+    device/faea/HY509_V2_0/modules/mtk_stp_bt.ko:system/lib/modules/mtk_stp_bt.ko \
+    device/faea/HY509_V2_0/modules/mtk_stp_gps.ko:system/lib/modules/mtk_stp_gps.ko \
+    device/faea/HY509_V2_0/modules/mtk_stp_uart.ko:system/lib/modules/mtk_stp_uart.ko \
+    device/faea/HY509_V2_0/modules/mtk_stp_wmt.ko:system/lib/modules/mtk_stp_wmt.ko \
+    device/faea/HY509_V2_0/modules/mtk_wmt_wifi.ko:system/lib/modules/mtk_wmt_wifi.ko \
+    device/faea/HY509_V2_0/modules/pvrsrvkm.ko:system/lib/modules/pvrsrvkm.ko \
+    device/faea/HY509_V2_0/modules/scsi_tgt.ko:system/lib/modules/scsi_tgt.ko \
+    device/faea/HY509_V2_0/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    device/faea/HY509_V2_0/modules/sec.ko:system/lib/modules/sec.ko \
+    device/faea/HY509_V2_0/modules/vcodec_kernel_driver.ko:system/lib/modules/vcodec_kernel_driver.ko \
+    device/faea/HY509_V2_0/modules/wlan.ko:system/lib/modules/wlan.ko \
+    device/faea/HY509_V2_0/modules/wlan_mt6628.ko:system/lib/modules/wlan_mt6628.ko
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
 
 PRODUCT_COPY_FILES += \
-    device/oppo/r819/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
+    device/faea/HY509_V2_0/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
 PRODUCT_PACKAGES := \
     audio.primary.default \
@@ -119,7 +119,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # media codec config xml file
 PRODUCT_COPY_FILES += \
-    device/oppo/r819/media_codecs.xml:system/etc/media_codecs.xml
+    device/faea/HY509_V2_0/media_codecs.xml:system/etc/media_codecs.xml
 
 # Bluetooth config file
 #PRODUCT_COPY_FILES += \
@@ -132,9 +132,9 @@ PRODUCT_COPY_FILES += \
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/oppo/r819/nfcee_access.xml
+    NFCEE_ACCESS_PATH := device/faea/HY509_V2_0/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/oppo/r819/nfcee_access_debug.xml
+    NFCEE_ACCESS_PATH := device/faea/HY509_V2_0/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml

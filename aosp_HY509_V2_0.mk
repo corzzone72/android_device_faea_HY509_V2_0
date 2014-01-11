@@ -13,6 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-$(call inherit-product, device/oppo/r819/omni_r819.mk)
+$(call inherit-product, device/faea/HY509_V2_0/omni_HY509_V2_0.mk)
 
-PRODUCT_NAME := aosp_r819
+PRODUCT_NAME := aosp_HY509_V2_0

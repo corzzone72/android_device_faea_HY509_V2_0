@@ -26,7 +26,7 @@ $(call inherit-product, device/oppo/r819/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_r819
-PRODUCT_DEVICE := r819
-PRODUCT_BRAND := Oppo
-PRODUCT_MODEL := AOSP on r819
+PRODUCT_NAME := full_HY509_V2_0
+PRODUCT_DEVICE := HY509_V2_0
+PRODUCT_BRAND := Faea
+PRODUCT_MODEL := Faea HY509

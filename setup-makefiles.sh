@@ -1,6 +1,6 @@
 #!/bin/sh
-VENDOR=oppo
-DEVICE=r819
+VENDOR=faea
+DEVICE=HY509_V2_0
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
