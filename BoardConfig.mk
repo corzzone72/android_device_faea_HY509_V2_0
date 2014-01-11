@@ -40,7 +40,7 @@ USE_CAMERA_STUB := true
 include vendor/faea/HY509_V2_0/BoardConfigVendor.mk
 include device/faea/HY509_V2_0/BoardConfigCommon.mk
 
-TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/fstab.mt6589
+TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/root/fstab.mt6589
 
 BOARD_CUSTOM_MKBOOTIMG := mkmtkbootimg
 
