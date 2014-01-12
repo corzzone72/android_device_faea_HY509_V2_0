@@ -20,17 +20,17 @@
 #
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/custom/config/common.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/oppo/r819/device.mk)
+$(call inherit-product, device/faea/HY509_V2_0/device.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := custom_HY509_V2_0
+PRODUCT_NAME := omni_HY509_V2_0
 PRODUCT_DEVICE := HY509_V2_0
 PRODUCT_BRAND := Faea
 PRODUCT_MODEL := Faea HY509
