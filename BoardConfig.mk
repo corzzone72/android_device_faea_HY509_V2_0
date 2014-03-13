@@ -42,8 +42,6 @@ include device/faea/HY509_V2_0/BoardConfigCommon.mk
 
 TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/root/fstab.mt6589
 
-BOARD_CUSTOM_MKBOOTIMG := mkmtkbootimg
-
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 #BOARD_SEPOLICY_DIRS := \
