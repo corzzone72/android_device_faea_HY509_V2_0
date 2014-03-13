@@ -46,6 +46,8 @@ TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 TARGET_MKIMAGE := device/faea/HY509_V2_0/mkimage
 
+TARGET_USE_BUILT_BOOTIMAGE := true
+
 #BOARD_SEPOLICY_DIRS := \
 #        device/faea/HY509_V2_0/sepolicy
 
