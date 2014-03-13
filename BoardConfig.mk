@@ -44,6 +44,8 @@ TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/root/fstab.mt6589
 
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
+TARGET_MKIMAGE := device/faea/HY509_V2_0/mkimage
+
 #BOARD_SEPOLICY_DIRS := \
 #        device/faea/HY509_V2_0/sepolicy
 
