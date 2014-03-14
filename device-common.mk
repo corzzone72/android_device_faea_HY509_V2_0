@@ -64,7 +64,6 @@ PRODUCT_COPY_FILES += \
     device/faea/HY509_V2_0/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
     device/faea/HY509_V2_0/modules/sec.ko:system/lib/modules/sec.ko \
     device/faea/HY509_V2_0/modules/vcodec_kernel_driver.ko:system/lib/modules/vcodec_kernel_driver.ko \
-    device/faea/HY509_V2_0/modules/wlan.ko:system/lib/modules/wlan.ko \
     device/faea/HY509_V2_0/modules/wlan_mt6628.ko:system/lib/modules/wlan_mt6628.ko
 
 PRODUCT_COPY_FILES += \
