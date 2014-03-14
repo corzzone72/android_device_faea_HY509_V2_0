@@ -20,6 +20,10 @@ else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+TARGET_KERNEL_SOURCE := kernel/mt6589
+export TARGET_KERNEL_PRODUCT := e960
+TARGET_KERNEL_CONFIG := .config
+
 PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
