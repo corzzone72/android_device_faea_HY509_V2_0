@@ -33,7 +33,6 @@ vendor/bin/pvrsrvctl
 bin/ccci_fsd
 bin/ccci_mdinit
 bin/rild
-bin/wpa_supplicant
 bin/nvram_daemon
 bin/hald
 bin/wlan_loader
