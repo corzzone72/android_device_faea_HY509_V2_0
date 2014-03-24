@@ -19,7 +19,8 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 PRODUCT_COPY_FILES := \
     device/faea/HY509_V2_0/root/fstab.mt6589:root/fstab.mt6589 \
-    device/faea/HY509_V2_0/root/init.mt6589.rc:root/init.mt6589.rc
+    device/faea/HY509_V2_0/root/init.mt6589.rc:root/init.mt6589.rc \
+    device/faea/HY509_V2_0/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # the actual meat of the device-specific product definition
 $(call inherit-product, device/faea/HY509_V2_0/device-common.mk)
