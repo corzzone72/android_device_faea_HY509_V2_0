@@ -41,6 +41,10 @@ for FILE in `cat proprietary-files.txt`; do
     echo "    $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
 
+echo "PRODUCT_COPY_FILES += \\" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/libaudio.primary.default.so:system/lib/hw/audio.primary.mt6589.so\$LINEEND" >> $MAKEFILE
+echo " $OUTDIR/proprietary/lib/hw/audio_policy.mt6589.so:system/lib/hw/audio_policy.mt6589.so$LINEEND" >> $MAKEFILE
+
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
 # Copyright (C) 2011 The CyanogenMod Project
 #
