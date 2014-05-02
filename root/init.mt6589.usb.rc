@@ -7,7 +7,7 @@ on boot
 
 on property:sys.usb.config=adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idVendor 0BB4
     write /sys/class/android_usb/android0/idProduct 0C01
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
@@ -16,7 +16,7 @@ on property:sys.usb.config=adb
 
 on property:sys.usb.config=mtp
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idVendor 0BB4
     write /sys/class/android_usb/android0/idProduct 2012
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
@@ -24,7 +24,7 @@ on property:sys.usb.config=mtp
 
 on property:sys.usb.config=mtp,adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idVendor 0BB4
     write /sys/class/android_usb/android0/idProduct =C02
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
@@ -33,7 +33,7 @@ on property:sys.usb.config=mtp,adb
 
 on property:sys.usb.config=ptp
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idVendor 0BB4
     write /sys/class/android_usb/android0/idProduct 200B
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
@@ -41,7 +41,7 @@ on property:sys.usb.config=ptp
 
 on property:sys.usb.config=ptp,adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/idVendor 22D9
+    write /sys/class/android_usb/android0/idVendor 0BB4
     write /sys/class/android_usb/android0/idProduct 200C
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/class/android_usb/android0/enable 1
