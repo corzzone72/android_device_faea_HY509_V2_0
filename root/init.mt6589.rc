@@ -22,14 +22,18 @@ on early-init
 
 on init
     # See storage config details at http://source.android.com/tech/storage/
-    export EXTERNAL_STORAGE /storage/sdcard0
-
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
     mkdir /storage/sdcard0 0700 root root
+    mkdir /storage/sdcard1 0700 root root
+    export EXTERNAL_STORAGE /storage/sdcard0
+    export SECONDARY_STORAGE /storage/sdcard1
 
     # Back compat
-    symlink /storage/sdcard0 /sdcard
-    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /storage/sdcard0 /mnt/emmc
+    symlink /storage/sdcard0 /emmc
+    symlink /storage/sdcard1 /sdcard
+    symlink /storage/sdcard1 /mnt/sdcard
 
 on fs
     mkdir /protect_f
@@ -266,9 +270,14 @@ service wlanLoader /system/bin/wlan_loader
     oneshot
 
 service nvram_daemon /system/bin/nvram_daemon
-    user root
-    group radio system
+    class main
+    user nvram
+    group nvram system
     oneshot
+
+service NvRAMAgent /system/bin/nvram_agent_binder
+    user system
+    group system nvram
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
@@ -277,5 +286,10 @@ on property:ro.data.large_tcp_window_size=true
 
 # virtual sdcard daemon running as media_rw (1023)
 service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard0 /storage/sdcard0
+    class late_start
+    disabled
+
+# virtual sdcard daemon running as media_rw (1023)
+service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled

@@ -41,12 +41,12 @@ service gsm0710muxd /system/bin/gsm0710muxd -s /dev/ttyC0 -f 512 -n 8 -m basic
 
 service muxreport-daemon /system/bin/muxreport
     class core
-    user root
+    user radio
     group radio cache inet misc ccci
     oneshot
     disabled
 
-service ril-daemon /system/bin/rild
+service ril-daemon /system/bin/logwrapper /system/xbin/strace -s 1024 /system/bin/rild
     class core
     socket rild stream 660 root radio
     socket rild2 stream 660 root radio
@@ -56,7 +56,7 @@ service ril-daemon /system/bin/rild
     socket rild-mtk-modem stream 660 radio system
     socket rild-atci stream 660 root radio
     user root
-    group radio cache inet misc audio sdcard_r sdcard_rw log
+    group radio cache inet misc audio sdcard_r sdcard_rw log ccci system
     disabled
 
 #service ril-daemon-md2 /system/bin/rildmd2
@@ -72,10 +72,10 @@ service ril-daemon /system/bin/rild
 #    group radio cache inet misc audio sdcard_r sdcard_rw log
 #    disabled
 
-#service md_minilog_util /system/bin/md_minilog_util
-#    user radio
-#    disabled
-#    oneshot
+service md_minilog_util /system/bin/md_minilog_util
+    user radio
+    disabled
+    oneshot
 
 #
 #  Modem related services (Begin)
@@ -84,11 +84,11 @@ service ril-daemon /system/bin/rild
 service permission_check /system/bin/permission_check
     class main
     user root
-    group radio
+    group nvram
     oneshot
 
 service ccci_fsd /system/bin/ccci_fsd 0
-    user root
+    user ccci
     group nvram ccci system
     class core
     oneshot

@@ -40,6 +40,7 @@ lib/libwapi.so
 vendor/bin/pvrsrvctl
 bin/ccci_fsd
 bin/ccci_mdinit
+bin/permission_check
 bin/rild
 bin/nvram_daemon
 bin/nvram_agent_binder

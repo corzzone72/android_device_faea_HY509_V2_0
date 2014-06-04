@@ -23,7 +23,7 @@
 $(call inherit-product, device/faea/HY509_V2_0/device.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_HY509_V2_0
