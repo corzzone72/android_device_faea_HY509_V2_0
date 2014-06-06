@@ -20,6 +20,8 @@ else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+TARGET_PREBUILT_RECOVERY_KERNEL := device/faea/HY509_V2_0/kernel
+
 WIFI_DRIVER_FW_PATH_STA := "STA"
 WIFI_DRIVER_FW_PATH_AP := "AP"
 WIFI_DRIVER_FW_PATH_P2P := "STA+P2P"
@@ -51,7 +53,8 @@ PRODUCT_COPY_FILES += \
     device/faea/HY509_V2_0/root/ueventd.mt6589.rc:root/ueventd.mt6589.rc \
     device/faea/HY509_V2_0/root/init.mt6589.usb.rc:root/init.mt6589.usb.rc \
     device/faea/HY509_V2_0/root/init.modem.rc:root/init.modem.rc \
-    device/faea/HY509_V2_0/gps.conf:system/etc/gps.conf
+    device/faea/HY509_V2_0/gps.conf:system/etc/gps.conf \
+    device/faea/HY509_V2_0/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_COPY_FILES += \
     device/faea/HY509_V2_0/modules/ccci.ko:system/lib/modules/ccci.ko \
@@ -93,6 +96,7 @@ PRODUCT_PACKAGES := \
     audio.primary.default \
     audio.a2dp.default \
     audio.usb.default \
+    audio.r_submix.default \
     camera.default \
     gps.default \
     keystore.default \

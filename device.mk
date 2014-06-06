@@ -31,7 +31,5 @@ $(call inherit-product, vendor/faea/HY509_V2_0/HY509_V2_0-vendor.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.carrier=wifi-only
 
-DEVICE_RESOLUTION := 720x1280
-
 DEVICE_PACKAGE_OVERLAYS := \
     device/faea/HY509_V2_0/overlay

@@ -29,18 +29,11 @@
 # we set USE_PROPRIETARY_AUDIO_EXTENSIONS to true in the proprietary variant as
 # well.
 USE_CAMERA_STUB := true
-#USE_PROPRIETARY_AUDIO_EXTENSIONS := false
 
-#BOARD_LIB_DUMPSTATE := libdumpstate.mt6589
-
-#TARGET_RECOVERY_UI_LIB := librecovery_ui_mt6589
-
-#TARGET_RELEASETOOLS_EXTENSIONS := device/faea/HY509_V2_0
+TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/root/fstab.mt6589
 
 include vendor/faea/HY509_V2_0/BoardConfigVendor.mk
 include device/faea/HY509_V2_0/BoardConfigCommon.mk
-
-TARGET_RECOVERY_FSTAB = device/faea/HY509_V2_0/root/fstab.mt6589
 
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
@@ -71,3 +64,21 @@ BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
 #        surfaceflinger.te \
 #        system.te \
 #        zygote.te
+
+DEVICE_RESOLUTION := 1080x1920
+
+BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_HAS_LARGE_FILESYSTEM := true
+
+TW_NO_USB_STORAGE := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/mt6320-battery/power_supply/battery
+
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
+
