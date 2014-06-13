@@ -60,5 +60,7 @@ BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 BOARD_EGL_CFG := device/faea/HY509_V2_0/egl.cfg
 
+BOARD_NEEDS_OLD_HWC_API := true
+
 # Avoid the generation of ldrcc instructions
 # NEED_WORKAROUND_CORTEX_A9_745320 := true
