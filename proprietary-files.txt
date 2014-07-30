@@ -15,6 +15,7 @@ vendor/lib/egl/libEGL_mtk.so
 vendor/lib/egl/libGLESv1_CM_mtk.so
 vendor/lib/egl/libGLESv2_mtk.so
 vendor/lib/hw/gralloc.mt6589.so
+lib/hw/hwcomposer.mt6589.so
 lib/libaudiosetting.so
 lib/libaed.so
 lib/libaudiocustparam.so
@@ -23,7 +24,6 @@ lib/libmtk_drvb.so
 lib/libspeech_enh_lib.so
 lib/libaudiocompensationfilter.so
 lib/libbessound_mtk.so
-lib/libmedia.so
 lib/libm4u.so
 lib/libion.so
 lib/libdpframework.so
@@ -45,6 +45,7 @@ bin/rild
 bin/nvram_daemon
 bin/nvram_agent_binder
 bin/hald
+bin/muxreport
 bin/wlan_loader
 bin/6620_launcher
 etc/audio_policy.conf
@@ -71,3 +72,21 @@ etc/firmware/catcher_filter.bin
 etc/firmware/WIFI_RAM_CODE
 etc/firmware/mt6628_patch_e2_1_hdr.bin
 etc/firmware/WMT.cfg
+lib/libimageio.so
+lib/libcamdrv.so
+lib/libbwc.so
+lib/libcam.utils.so
+lib/libcam.paramsmgr.so
+lib/libcameracustom.so
+lib/libcam_camera_exif.so
+lib/libmatv_cust.so
+lib/libfeatureio.so
+lib/libcamalgo.so
+lib/lib3a.so
+lib/libcam.client.so
+lib/libmpo.so
+lib/libmpoencoder.so
+lib/libcam.camshot.so
+lib/libcam.campipe.so
+lib/libcam.camadapter.so
+lib/libJpgEncPipe.so
