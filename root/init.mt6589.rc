@@ -35,6 +35,12 @@ on init
     symlink /storage/sdcard1 /sdcard
     symlink /storage/sdcard1 /mnt/sdcard
 
+    # Change ION driver permission
+    chmod 0644 /dev/ion
+
+    # Change MMP driver permission
+    chmod 0644 /dev/mmp
+
 on fs
     mkdir /protect_f
     mkdir /protect_s
@@ -97,6 +103,12 @@ on post-fs-data
     chmod 0660 /dev/sw_sync
     chown system graphics /dev/sw_sync
 
+    #VideoCodec
+    insmod /system/lib/modules/vcodec_kernel_driver.ko
+    mknod /dev/Vcodec c 160 0
+    chmod 0660 /dev/Vcodec
+    chown system media /dev/Vcodec
+
     # Touch Panel
     chmod 0664 /dev/touch
     chown root diag /sys/module/tpd_setting/parameters/tpd_calmat
@@ -114,6 +126,39 @@ on post-fs-data
 
     chmod 0660 /dev/pmem_multimedia
     chown system media /dev/pmem_multimedia
+
+    #Camera
+    chmod 0664 /dev/camera-sysram
+    chmod 0664 /dev/camera-isp
+    chmod 0664 /dev/camera-pipemgr
+    chmod 0660 /dev/kd_camera_hw
+    chmod 0660 /dev/kd_camera_flashlight
+    chmod 0660 /dev/kd_camera_hw_bus2
+    chmod 0660 /dev/DW9714AF
+
+    chown system camera /dev/camera-sysram
+    chown system camera /dev/camera-isp
+    chown system camera /dev/camera-pipemgr
+    chown system camera /dev/kd_camera_hw
+    chown system camera /dev/kd_camera_flashlight
+    chown system camera /dev/kd_camera_hw_bus2
+    chown system camera /dev/DW9714AF
+
+    chmod 0666 /sys/bus/platform/drivers/mem_bw_ctrl/concurrency_scenario
+    chown system media /sys/bus/platform/drivers/mem_bw_ctrl/concurrency_scenario
+
+    # SMI
+    chmod 0666 /dev/MTK_SMI
+    chown system media /dev/MTK_SMI
+
+    # JPEG
+    chmod 0664 /dev/mtk_jpeg
+    chmod 0664 /dev/mtk_gdma
+    chmod 0664 /dev/mtk_gfmt
+    chmod 0664 /dev/mtk_almk
+
+    # DISP
+    chmod 0664 /dev/mtk_disp
 
     # watch dog kicker
     write /proc/wdk "0 20 30"
