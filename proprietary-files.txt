@@ -72,6 +72,7 @@ etc/firmware/catcher_filter.bin
 etc/firmware/WIFI_RAM_CODE
 etc/firmware/mt6628_patch_e2_1_hdr.bin
 etc/firmware/WMT.cfg
+lib/hw/camera.default.so
 lib/libimageio.so
 lib/libcamdrv.so
 lib/libbwc.so
