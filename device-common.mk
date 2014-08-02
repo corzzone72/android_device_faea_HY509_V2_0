@@ -128,7 +128,8 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # media codec config xml file
 PRODUCT_COPY_FILES += \
-    device/faea/HY509_V2_0/media_codecs.xml:system/etc/media_codecs.xml
+    device/faea/HY509_V2_0/media_codecs.xml:system/etc/media_codecs.xml \
+    device/faea/HY509_V2_0/media_profiles.xml:system/etc/media_profiles.xml
 
 # Bluetooth config file
 #PRODUCT_COPY_FILES += \
