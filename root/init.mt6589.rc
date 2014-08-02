@@ -88,6 +88,14 @@ on post-fs-data
     exec /system/bin/insmod /system/lib/modules/pvrsrvkm.ko
     exec /system/bin/insmod /system/lib/modules/mtklfb.ko
 
+    # device info /proc interface
+    exec /system/bin/insmod /system/lib/modules/devinfo.ko
+    exec /system/xbin/mknod /dev/devmap c 196 0
+    chmod 0444 /dev/devmap
+    chown root media /dev/devmap
+
+    start pvrsrvctl
+
     # Permissions for System Server and daemons.
     chown root   radio  /sys/class/leds/lcd-backlight/brightness
     chown root   radio  /sys/class/leds/lcd-backlight/duty
@@ -174,12 +182,6 @@ on post-fs-data
 
     # device apc settings
     exec /system/bin/insmod /system/lib/modules/devapc.ko
-
-    # device info /proc interface
-    exec /system/bin/insmod /system/lib/modules/devinfo.ko
-    exec /system/xbin/mknod /dev/devmap c 196 0
-    chmod 0444 /dev/devmap
-    chown root media /dev/devmap
 
     # modem
     mkdir /dev/radio 0770 radio radio
